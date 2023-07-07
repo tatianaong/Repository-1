@@ -34,9 +34,9 @@ def savings(gross_pay, tax_rate, expenses):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    after_tax_pay = gross_pay - tax_rate
+    after_tax_pay = gross_pay - (tax_rate * gross_pay)
+    after_tax_pay = int(after_tax_pay)
     net_pay = after_tax_pay - expenses
-    net_pay = int(net_pay)
     return net_pay
 
 
@@ -144,7 +144,7 @@ def body_mass_index(weight, height):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    kg_weight = weight * 2.2
+    kg_weight = weight * 0.453592
     foot_height = height[0]
     meter_height1 = foot_height * 0.3048
     inch_height = height[1]
@@ -152,5 +152,4 @@ def body_mass_index(weight, height):
     total_meter = meter_height1 + meter_height2
     bmi = kg_weight / (total_meter ** 2)
     return bmi
-
 

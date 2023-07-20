@@ -37,23 +37,13 @@ def shift_letter(letter, shift):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    
     if letter == " ":
         return_value = " "
-        return(return_value)
-    
-    while shift + alphabet.index(letter) > 25:
-        number = shift + alphabet.index(letter) - 26
-        return_value = alphabet[number]  
-        return(return_value)
-
+        
     else:
-        number = alphabet.index(letter)
-        return_value = alphabet[number+shift]
-    
+        return_value = chr((((ord(letter)+shift)-65)%26)+65)
+        
     return(return_value)
-    
 
 def caesar_cipher(message, shift):
     '''Caesar Cipher.
@@ -111,16 +101,11 @@ def shift_by_letter(letter, letter_shift):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    
     if letter == " ":
         return_value = " "
-        return(return_value)
-
+        
     else:
-        letter_shift_index = alphabet.index(letter_shift) 
-        letter_index = alphabet.index(letter)
-        return_value= alphabet[letter_shift_index + letter_index]
+        return_value = chr(((ord(letter)-65+ord(letter_shift)-65)%26)+65)
     
     return(return_value)
 

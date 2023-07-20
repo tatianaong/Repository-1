@@ -205,7 +205,7 @@ def scytale_cipher(message, shift):
     # Stay within the function. Only use the parameters as input. The function should return your answer.
     return_value = ""
     
-    if len(message)%shift != 0:
+    while len(message)%shift != 0:
         message = message + "_"
         
     else:

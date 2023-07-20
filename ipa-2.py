@@ -155,7 +155,6 @@ def vigenere_cipher(message, key):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    def vigenere_cipher(message, key):
     return_value = ""
 
     for i in range(len(message)):
@@ -219,7 +218,6 @@ def scytale_cipher(message, shift):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    def scytale_cipher(message, shift):
     return_value = ""
     
     if len(message)%shift != 0:
@@ -259,7 +257,6 @@ def scytale_decipher(message, shift):
     '''
     # Replace `pass` with your code.
     # Stay within the function. Only use the parameters as input. The function should return your answer.
-    def scytale_decipher(message, shift):
     return_value = ""
     
     for i in range(len(message)):
